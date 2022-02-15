@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 260px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+  <h2>Stroke Prediction App</h2>
+    
+    <h3>Please Enter Details:</h3>
+    <br>
+    <form method="post" enctype="multipart/form-data" action="predictstroke">
+ {% csrf_token %}
+ <div class="col-md-4 col-sm-4"><label for="gender">Gender:</label> </div> <select name="gender" id="gender"> <option value="0">Female</option><option value="1">Male</option><option value="2">Other</option></select><br><br>
+ <div class="col-md-4 col-sm-4">Age:</div><input type="range" min="0" max="100" value="0" class="slider" name="age" id="age"><br><br>
+ <div class="col-md-4 col-sm-4"><label for="hypertension">Do You Have Hypertension:</label> </div> <select name="hypertension" id="hypertension"><option value="0">No</option><option value="1">Yes</option></select><br><br>
+ <div class="col-md-4 col-sm-4"><label for="heart_disease">Do You Have a Heart Disease:</label> </div> <select name="heart_disease" id="heart_disease"><option value="0">No</option><option value="1">Yes</option></select><br><br>
+ <div class="col-md-4 col-sm-4"><label for="ever_married">Ever Married:</label> </div> <select name="ever_married" id="ever_married"><option value="0">No</option><option value="1">Yes</option></select><br><br>
+ <div class="col-md-4 col-sm-4"><label for="work_type">Work Type:</label> </div> <select name="work_type" id="work_type"><option value="0">Govt. Job</option><option value="1">Never Woked</option><option value="2">Private</option><option value="3">Self Employed</option><option value="4">Child</option></select><br><br>
+ <div class="col-md-4 col-sm-4"><label for="residence_type">Residence Type:</label> </div> <select name="residence_type" id="residence_type"><option value="0">Rural</option><option value="1">Urban</option></select><br><br>
+ <div class="col-md-4 col-sm-4">Avg Glucose Level:</div><input type="range" min="0" max="250" value="0" class="slider" name="avg_glucose_level" id="avg_glucose_level"><br><br>
+ <div class="col-md-4 col-sm-4">BMI:</div><input type="range" min="0.0" max="80.0" value="0" class="slider" name="bmi" id="bmi"><br><br>
+ <div class="col-md-4 col-sm-4"><label for="smoking_status">Smoking Status:</label> </div> <select name="smoking_status" id="smoking_status"><option value="0">Unknown</option><option value="1">Formerly Smoke</option><option value="2">Never Smokes</option><option value="3">Smokes</option></select><br><br>
+ <br>
+ <input type="submit" value="Submit"></div>
+
+</form>
+<br>
+  
+</div>
+   
+</body>
+</html> 

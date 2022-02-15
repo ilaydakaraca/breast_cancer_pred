@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Website</title>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrapper {
+        background: url("https://previews.dropbox.com/p/thumb/ABbsuqA3gDXKC4xnZod04hOCBElJUqhBQjKJ60u-7MDnpIuahttBIEU5dNX4RGApNn0cPN_pmhP1f-xsg78naYVkuVDuZzjvOyZWyo0Cs6CEMzRm7i40HziBbYGlwWt-4iuDw7b-8tid3qsRcV-HA6JtM1iwdQmB4YEKd2mKsI79bN91iZMkMpByO1m6iAv4kFztIIGXG871ng326YjrjqL_9K0Nuoqaq8pZytrehM-zL6GEfAlpBrZt5IW5TX6-S8gHygy90GyvDoV8Bv97_zK041jN3HWdPT4NFen_jxRaDseZoABorXh_bPBejF5aXuterwOOkdU-6Hmv3DUbxfeGoC4qFBS0TiMZJ0FjRTbrzg/p.png") no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .navbar{
+        height:110px;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+    }
+    .logo{
+        width: 200px;
+        height: 130px;
+        padding: 0px 50px;
+    }
+    .navbar ul{
+        float: right;
+        margin-right: 20px;
+    }
+    .navbar ul li{
+        list-style: none;
+        margin: 0 8px;
+        display: inline-block;
+        Line-height: 120px;
+
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding: 6px 13px;
+        font-family: 'Roboto', sans-serif;
+        transition: .4s;
+    }
+
+    .navbar ul li a.active,
+    .navbar ul li a:hover{
+        background: rgba(248, 136, 61, 0.699);
+        border-radius: 2px;
+    }
+
+    .wrapper .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: sans-serif;
+        user-select: none;
+    }
+    .center h1{
+        color: rgb(236, 220, 220);
+        font-size: 70px;
+        font-weight: bold;
+        width: 900px;
+        text-align: center;
+    }
+
+    .center h2{
+        color: rgba(189, 164, 164, 0.89);
+        font-size: 70px;
+        font-weight: bold;
+        width: 885px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .center .buttons{
+        margin:35px 350px;
+    }
+
+    .buttons button{
+        height: 50px;
+        width: 150px;
+        font-size: 18px;
+        font-weight: bold;
+        color:#470e0e;
+        background:rgba(248, 136, 61, 0.699);
+        border: 1px solid #612400;
+        outline: none;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: .5s;
+    }
+
+    .buttons button:hover{
+        background: rgba(184, 75, 2, 0.726);
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <img class="logo" src="https://previews.dropbox.com/p/thumb/ABbH_4xsK5WVI4OxfKHkuJIYVx548XPoN4mNK7lJ4L8ruaMlKwXzRmqN6LPnt6B_sYUOIuI50CesrpLPmnzUhJMTuarGvlLZJQms_0jULRrVi3vOU0UgM9sZ9J-hf6COrAYUrnGj_aa3B1qCpR4CyfW_jsirdWDx8FPmrtDVePNTBryHuFCaaybmB1blsJ-L5LHfsTBOqT-elTS9ULxiQosBlvltNyaDsj4yFJWajPwwzFs0w4SfgyTWRiLlSSRY8iyNmmd1jRBKIpZxUYMb7hE4cluo7eAax35bm8nfKKBFaZW9TurGFinAp9N5jBwiRS7Shc_yRFfl9x6sr-AJ0n4vLIflsgLhf8KmE6ydlFoNUw/p.png">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FeedBack</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="center">
+            <h1>Welcome to Halcyon</h1>
+            <h2>Fast, Accurate and Early Diagnosis</h2>
+            <div class="buttons">
+                <button>Explore More</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

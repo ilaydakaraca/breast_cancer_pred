@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head> 
+
+    <title>Stroke Prediction App</title>
+
+</head> 
+{{temp}}
+
+<body>
+    <table id="table" border="1">
+    <tr>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Hypertension</th>
+        <th>Heart Disease</th>
+        <th>Ever Married</th>
+        <th>Work Type</th>
+        <th>Residence Type</th>
+        <th>Avg Glucose Level</th>
+        <th>BMI</th>
+        <th>Smoking Status</th>
+
+    </tr>
+    <tr>
+        <td>{{temp.gender}}</td>
+        <td>{{temp.age}}</td>
+        <td>{{temp.heart_disease}}</td>
+        <td>{{temp.hypertension}}</td>
+        <td>{{temp.ever_married}}</td>
+        <td>{{temp.work_type}}</td>
+        <td>{{temp.residence_type}}</td>
+        <td>{{temp.avg_glucose_level}}</td>
+        <td>{{temp.bmi}}</td>
+        <td>{{temp.smoking_status}}</td>
+    </tr>
+</table>
+<h1>Stroke Detection: {{scoreval}}</h1>
+
+
+</body>
+</html>
